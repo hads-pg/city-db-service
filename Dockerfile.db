@@ -1,0 +1,7 @@
+FROM postgres:16-alpine
+
+COPY bus.sql /docker-entrypoint-initdb.d/
+
+ENV POSTGRES_USER=cityservice
+ENV POSTGRES_PASSWORD=cityservice
+ENV POSTGRES_DB=city_service

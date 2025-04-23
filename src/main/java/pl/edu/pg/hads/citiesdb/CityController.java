@@ -15,12 +15,13 @@ public class CityController {
         this.cityService = cityService;
     }
 
-    @GetMapping("/api/cities")
+    @GetMapping("/cities")
     public List<CityModel> getAllCities() {
+        System.out.println("###DEBUG### Getting all cities");
         return cityService.getAllCities();
     }
 
-    @GetMapping("/api/city")
+    @GetMapping("/city")
     public CityModel getCity(
             @RequestParam(required = false) String uuid,
             @RequestParam(required = false) String shortName,
